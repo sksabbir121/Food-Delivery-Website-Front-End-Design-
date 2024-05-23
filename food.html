@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Food Delivery Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        header {
+            background-color: #ffffff;
+            padding: 10px 0;
+            width: 1450px;
+            height: 55px;
+            padding-top: 25px;
+            padding-left: 35px;
+            color: #F40469;
+        }
+
+        .container {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 2em;
+            font-weight: bolder;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: rgb(46, 44, 44);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            background-image: url(0de1be2d52c519d422fded9e6b49d77a.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 80px ;
+            background-position: center;
+            
+            
+            
+        }
+
+        .cons {
+            text-align: center;
+        }
+
+        .title {
+            font-size: 3em;
+            color:#ffffff;
+            display: block;
+            text-align: center;
+        }
+
+        .search {
+            display: flex;
+            gap: 0px;
+            justify-content: center;
+            
+        
+
+        }
+
+
+        .new {
+            background-color: #ffffff;
+            padding: 10px;
+            color: rgb(26, 25, 25);
+            border: none;
+            text-align: center;
+            border-top-left-radius:50px ;
+            border-bottom-left-radius:50px ;
+        }
+
+        .input {
+            padding: 10px;
+            width: 315px;
+            height: 35px;
+            text-align: center;
+
+        }
+
+        .btn {
+            background-color: #F40469;
+            color: white;
+            width: 136px;
+            height: 60px;
+            border: none;
+            text-align: center;
+            border-top-right-radius:50px ;
+            border-bottom-right-radius:50px ;
+            padding: 10px;
+        }
+        .fa-solid.fa-location-dot {
+            color: rgb(221, 70, 70);
+            padding: 10px;
+            border: none;
+        }
+
+        .force {
+            width: 85%;
+            margin: 0 auto;
+            gap: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px ;
+            padding-top: 20px;
+            padding-left: 50px;
+        }
+
+        .ab {
+            width: 50%;
+            background-repeat: no-repeat;
+            background-color: #ffffff;
+            padding: 40px;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            
+        }
+
+        .abc {
+            padding: 10%;
+            background-color: #ffffff;
+            width: 50%;
+            margin-left: 10px;
+            padding-left: 10%;
+            
+
+        }
+
+        .h3title {
+            text-align: left;
+            color: #141414;
+            font-size: 40px;
+            font-weight: 400;
+        }
+
+        .para1 {
+            text-align: left;
+            color: #141414;
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+        .btn1 {
+            background-color: #F40469;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12px;
+            font-weight: 400;
+            position: left;
+            color: white;
+            width: 200px;
+            height: 50px;
+            border: none;
+            text-align: center;
+            padding: 10px;
+            margin: 0 auto;
+            border-radius: 15%;
+            border-radius: 50px;
+            
+        }
+        .pic1 {
+            width: 100%;
+        }
+
+        .grid-container {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            
+            background-color: #fff;
+            padding: 4rem;
+            row-gap: 1rem;
+            column-gap: 1rem;
+            
+        }
+
+        .grid-item1 {
+            grid-row-start: 1;
+            grid-row-end: 3;
+            
+            
+        }
+
+        .rpic1 {
+            width: 100%;
+            border-radius: 5%;
+        }
+        .rpic2 {
+            width: 100%;
+            border-radius: 5%;
+        }
+        .rpic3 {
+            width: 100%;
+            border-radius: 5%;
+        }
+        .rpic4 {
+            width: 100%;
+            border-radius: 5%;
+        }
+        .rpic5 {
+            width: 100%;
+            border-radius: 5%;
+        }
+
+        .price {
+            color: rgb(122, 123, 124);
+            display: flex;
+            justify-content:space-between;
+            font-family: 'Times New Roman', Times, serif;      
+            
+        }
+
+        .view {
+            color: #141414;
+            display: flex;
+            font-size: 28px;
+            justify-content:space-between;
+            font-family: 'Times New Roman', Times, serif; 
+            padding: 2rem;   
+            padding-left: 3rem;  
+            font-weight: bold;
+            
+        }
+
+        .cardcontainer {
+            display: flex;
+            justify-content: space-between;
+            padding: 4rem;
+        }
+
+        .card {
+            background-color: white;
+           
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .cardtitle {
+            color: #F40469;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .cardpara {
+            color: #141414;
+            font-size: 16px;
+            font-weight: 400;
+            padding: 10px;
+        }
+
+        .fa-solid.fa-mobile-screen {
+            color: #F40469;
+            font-size: 60px;      
+            padding: 23px 36px;
+            background-image: url(icon.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%; 
+              
+        }
+
+        .fa-solid.fa-utensils {
+            color: #F40469;
+            font-size: 60px;      
+            padding: 23px 36px;
+            background-image: url(icon.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%; 
+        }
+
+        .fa-solid.fa-bowl-food {
+            color: #F40469;
+            font-size: 60px;      
+            padding: 23px 36px;
+            background-image: url(icon.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 50%; 
+            
+        }
+
+        .pinkpic {
+            display: flex;
+            flex-direction: column;
+            background-image: url(pinkpic.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 80%;
+            padding: 60px;
+            margin-left: 80px;
+            border-radius: 20px;
+        }
+
+        .para3 {
+            font-size: 40px;
+            font-family: "Gill Sans", sans-serif;
+            color: #ffffff;
+            display:normal;
+        }
+
+        .para4 {
+            font-size: 40px;
+            font-family: "Gill Sans", sans-serif;
+            color: #ffffff;
+            display:normal;
+            margin-left: 3px;
+        }
+
+        .btnsec {
+            display: flex;
+            gap: 50px;
+            
+        }
+
+        .btn2 {
+            background-color: #283747 ;
+            font-family: Georgia, serif;
+            width: 20%;
+            padding: 10px;
+            border: none;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            color: #ffffff;
+            border-top-left-radius:50px ;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius:50px ;
+            border-bottom-right-radius: 50px;
+        }
+
+        .para5 {
+            font-size: 22px;
+            font-family: Georgia, serif;
+            display: block;
+            color: #ffffff;
+            display: block;
+            
+        }
+
+        .loverdiv {
+           width: 50%;
+           text-align: center;
+           margin: 0 auto;
+        }
+
+        .lovertitle {
+            font-size: 40px;
+            font-family: system-ui;
+            color: #212122;
+            text-align: center;
+            margin-top: 90px;
+        }
+
+        .para6 {
+            font-size: 14px;
+            font-family: system-ui;
+            color: #212122;
+            text-align: center;
+            font-style: initial;
+            font-weight: 500;
+        }
+
+        .para7 {
+            font-size: 25px;
+            font-family: system-ui;
+            color: #ffffff;
+            text-align: center;
+            font-style: initial;
+            font-weight: 500;
+        }
+
+        .cardlover {
+            text-align: center;
+            width: 90%;
+            background-image: url(foodlover.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 40px;
+            margin: 0 auto;
+        }
+
+        .container3 {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            padding: 10px ;
+            gap: 80px;
+        }
+
+        .card-body {
+            background-color: rgba(0, 0, 0, 0.623);
+            border-radius: 50%;
+            margin-top: 50px;
+        }
+
+        .card-body img {
+            width: 15%;
+            border-radius: 50%;
+        }
+
+        .card-title {
+            color: #ffffff;
+            font-family: system-ui;
+            font-size: 35px;
+            font-weight: 400;
+            padding: 10px;
+        }
+
+        .card-text {
+            color: #F40469;
+            font-family: system-ui;
+            font-size: 20px;
+            font-weight: 400;
+            padding: 10px;
+        }
+
+        .flogo {
+            width: 70%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .logopic {
+            width: 100%;
+            margin-top:40px ;
+            border-radius: 10%;
+        }
+
+        .footerhead{
+            background-color: #ffffff;
+            padding: 10px 0;
+            width: 1232px;
+            height: 48px;
+            padding-top: 80px;
+            padding-left: 10px;
+            color: #F40469;
+        }
+
+        .footertitle {
+            font-size:2em;
+            font-weight: bold;
+            
+        }
+
+        .lastpic {
+            background-image: url(footerpic.jpg);
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            margin: 0 auto;
+            width: 100%;
+
+        }
+
+        footer{
+            display: flex;
+            flex-direction: row;
+            margin-top: 50px;
+            background-color: #F40469;
+        }
+
+        .container2 {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row;
+            padding: 10px ;
+            gap: 80px;
+        }
+
+        .footerCont {
+            text-align: left;
+        }
+
+        .footerContTwo {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+        }
+
+        .footerNav ul{
+            list-style: none;
+            text-align: left;
+        } 
+
+        .footerNav ul li {
+            margin-bottom: 10px;
+        }
+
+        .lastpichead {
+            font-size: 13px;
+           
+        }
+
+        .itworks {
+            text-align: center;
+            color: #1f1d1d;
+            font-size: 45px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+    </style>
+    <script src="https://kit.fontawesome.com/553ebd223f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">FoodDelivery</div>
+            <nav>
+                <ul>
+                    <li><a href="#">Sign In</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+
+    <section class="hero">
+        <div class="cons">
+            <h2 class="title">
+                Your favorite food, delivered to you
+            </h2>
+            <div class="search">
+                
+                    <label class="new" ><i class="fa-solid fa-location-dot"></i>NewYork</label>
+                    <input type="text" placeholder="Enter your delivery address" class="input">
+                    <button type="submit" class="btn">Search</button>
+                
+            </div>
+            
+    </section>
+
+    <section class="force">
+        <div class="ab">
+
+            <img src="food2.jpg" alt="food" class="pic1">
+
+
+        </div>
+        <div class="abc">
+            <h3 class="h3title">Take a taste, come join us. Life is so endlessly delicious</h3>
+            <p class="para1">In the artist's own experience, of course, art is fundamentally indefinable, unsayable; there is something sacred about its demands upon the soul, something inherently mysterious in the forms it takes</p>
+            
+            <button type="button" class="btn1">Download Our App</button>
+
+        </div>
+    </section>
+    <div class="view">
+        <p>Popular on New York area</p>
+        <p>View All<i class="fa-solid fa-right-long"></i></p>
+    </div>
+
+    <div class="grid-container">
+        <div class="grid-item1">
+            <img src="res1.jpg" alt="resturant1" class="rpic1">
+            <h2>Resturants1</h2>
+            <div class="price">
+              <p><i class="fa-solid fa-burger"></i> $ 9.99 Delivery Fee </p>  
+              <p><i class="fa-regular fa-clock"></i> 10-15 min</p>
+            </div>
+
+        </div>
+        <div class="grid-item2">
+            <img src="res2.jpg" alt="resturant2" class="rpic2">
+            <h2>Resturants2</h2>
+            <div class="price">
+              <p><i class="fa-solid fa-burger"></i> $ 9.99 Delivery Fee </p>  
+              <p><i class="fa-regular fa-clock"></i> 10-15 min</p>
+            </div>
+
+        </div>
+        <div class="grid-item3">
+            <img src="res3.jpg" alt="resturant3" class="rpic3">
+            <h2>Resturants3</h2>
+            <div class="price">
+              <p><i class="fa-solid fa-burger"></i> $ 9.99 Delivery Fee </p>  
+              <p><i class="fa-regular fa-clock"></i> 10-15 min</p>
+            </div>
+        </div>
+        <div class="grid-item4">
+            <img src="res4.jpg" alt="resturant4" class="rpic4">
+            <h2>Resturants4</h2>
+            <div class="price">
+              <p><i class="fa-solid fa-burger"></i> $ 9.99 Delivery Fee </p>  
+              <p><i class="fa-regular fa-clock"></i> 10-15 min</p>
+            </div>
+        </div>
+        <div class="grid-item5">
+            <img src="res5.jpg" alt="resturant5" class="rpic5">
+            <h2>Resturants5</h2>
+            <div class="price">
+              <p><i class="fa-solid fa-burger"></i> $ 9.99 Delivery Fee </p>  
+              <p><i class="fa-regular fa-clock"></i> 10-15 min</p>
+            </div>
+        </div>
+    </div>
+    <div class="itworks">
+        <p>How it Works</p>
+    </div>
+
+    <div class="cardcontainer">
+        
+        
+            <div class="card">
+                
+                <span class="fafa"><i class="fa-solid fa-mobile-screen"></i></span>
+                <h3 class="cardtitle">Order via App</h3>
+                <p class="cardpara">In the artist's own experience, of course, art is fundamentally indefinable, unsayable; there is something sacred about its demands</p>
+            </div>
+
+            <div class="card">
+                
+                <span class="fafa"><i class="fa-solid fa-utensils"></i></span>
+                <h3 class="cardtitle">Choose your food</h3>
+                <p class="cardpara">In the artist's own experience, of course, art is fundamentally indefinable, unsayable; there is something sacred about its demands</p>
+            </div>
+
+            <div class="card">
+                
+                <span class="fafa"><i class="fa-solid fa-bowl-food"></i></span>
+                <h3 class="cardtitle">Order via App</h3>
+                <p class="cardpara">In the artist's own experience, of course, art is fundamentally indefinable, unsayable; there is something sacred about its demands</p>
+            </div>
+        
+
+    </div>
+
+    <div class="pinkpic">
+        <div>
+            <p class="para3">Food Delivery helps you </p>
+            <p class="para4">bring food to your front door</p>
+        </div>
+        <div class="btnsec">
+            <button type="button" class="btn2">Download our App</button>
+            <p class="para5">Browse food</p>
+
+        </div>
+    </div>
+    <div class="loverdiv">
+        <div >
+            <h1 class="lovertitle">What our food lovers said</h1>
+            <p class="para6">In the artist's own experience, of course, art is fundamentally indefinable, unsayable; there is something sacred about its demands upon the soul, something inherently mysterious in the forms it takes</p>
+        </div>
+        
+
+        <div class="cardlover">
+            <div class="card-body">
+                <img src="circle.png" alt="card image" class="card-image">
+                <h2 class="card-title">In the artist's own experience, of course, art is fundamentally indefinable, unsayable</h2>
+                <p class="card-text">Tim Oliver, ordered Burger Extracheese </p>
+            </div>
+
+        </div>
+
+       
+
+    </div>
+
+    <div class="flogo">
+        <img src="logopic.jpg" alt="logopic"class="logopic">
+    </div>
+
+    <div class="footerhead">
+        <div class="container3">
+            <div>
+                <div class="footertitle">FoodDelivery</div>
+            </div>
+    
+            <div class="lastpichead">
+                <nav>
+                    <ul>
+                        <li><a href="#">Partners</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+                
+            </div>
+        </div>
+
+    </div>
+    <footer>
+        <div class="lastpic">
+
+            <div class="container2">
+                <div class="footerCont">
+                    <p>123 Lorem Ipsum Street <br>Tangerang, Banten <br> <br> +10 - 234 - 5678</p>
+                </div>
+                <div class="footerContTwo">
+                    <div class="footerNav">
+                        <ul>
+                            <li>All Restaurant </li>
+                            <li>Best Sellers</li>
+                            <li>Top Rated</li>
+                            <li>Newcomers</li>
+                        </ul>
+                    </div>
+                    <div class="footerNav">
+                        <ul>
+                            <li>FAQ</li>
+                            <li>Join our program</li>
+                            <li>Be our partners</li>
+                            <li>Terms & Condition</li>
+                        </ul>
+                    </div>
+                    <div class="footerNav">
+                        <ul>
+                            <li>Our Parent Company</li>
+                            <li>Make an investment</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
